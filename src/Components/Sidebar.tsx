@@ -226,7 +226,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
                   spacing='1px'
                   ml='2'>
                   <Text fontSize='sm' color='#fff'>
-                    Justina Clark
+                    Micheal Stacy
                   </Text>
                   <Text fontSize='xs' color='gray.300'>
                     Admin

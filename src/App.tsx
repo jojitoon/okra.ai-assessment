@@ -12,10 +12,16 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Recommendations from './Pages/Recommendations';
 import SidebarWithHeader from './Components/Sidebar';
 import ReportsPage from './Pages/Reports';
-
-/* <ColorModeSwitcher justifySelf="flex-end" /> */
+import Fonts from './Components/Fonts';
+import '@fontsource/open-sans/400.css';
+import '@fontsource/open-sans/600.css';
+import '@fontsource/open-sans/300.css';
 
 const theme = extendTheme({
+  fonts: {
+    heading: 'Avenir',
+    body: 'Avenir',
+  },
   colors: {
     brand: {
       100: '#98c21d',
@@ -27,6 +33,7 @@ const theme = extendTheme({
 
 export const App = () => (
   <ChakraProvider theme={theme}>
+    <Fonts />
     <BrowserRouter>
       <SidebarWithHeader>
         <Switch>

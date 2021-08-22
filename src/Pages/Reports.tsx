@@ -308,6 +308,10 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
                 ))}
               </BarChart>
             </ResponsiveContainer>
+            <Text color={strokeColors[0]} textAlign='center'>
+              Adherence comparism between Micheal and other reps from Q1-2016 to
+              Q2-2018
+            </Text>
           </Box>
           <Box flex='1' minH='300px' ml='2' my='5' bg='white' pt='8'>
             <ResponsiveContainer width='100%' height='100%'>
@@ -334,6 +338,10 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
                 />
               </LineChart>
             </ResponsiveContainer>
+            <Text color={strokeColors[0]} textAlign='center'>
+              Distribution of percentage of calls, emails and visits from
+              Q1-2016 to Q2-2018
+            </Text>
           </Box>
         </Flex>
       </Box>
@@ -362,6 +370,10 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
                 <Bar dataKey='% Visits on Target' fill={strokeColors[2]} />
               </BarChart>
             </ResponsiveContainer>
+            <Text color={strokeColors[0]} textAlign='center'>
+              Distribution of percentage of calls, emails and visits from
+              Q1-2016 to Q2-2018
+            </Text>
           </Box>
           <Box flex='1' minH='300px' ml='2' my='5' bg='white' pt='8'>
             <ResponsiveContainer width='100%' height='100%'>
@@ -463,18 +475,11 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
                     },
                   ],
                 }}
-                // nodePading={50}
-                // margin={{
-                //   left: 200,
-                //   right: 200,
-                //   top: 100,
-                //   bottom: 100,
-                // }}
                 link={{ stroke: strokeColors[0] }}>
                 <Tooltip />
               </Sankey>
             </ResponsiveContainer>
-            <Text color={strokeColors[0]}>
+            <Text color={strokeColors[0]} textAlign='center'>
               Sankey representation of priority suggestions from Q1-2016 to
               Q2-2018
             </Text>
@@ -507,6 +512,10 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
                 ))}
               </ComposedChart>
             </ResponsiveContainer>
+            <Text color={strokeColors[0]} textAlign='center'>
+              Market share value of Anatoxidone and others drugs from Q1-2016 to
+              Q1-2019
+            </Text>
           </Box>
           <Box flex='1' minH='300px' ml='2' my='5' bg='white' pt='8'>
             <ResponsiveContainer width='100%' height='100%'>
@@ -528,6 +537,9 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
                 /> */}
               </LineChart>
             </ResponsiveContainer>
+            <Text color={strokeColors[0]} textAlign='center'>
+              Market share percentage of Anatoxidone from Q1-2016 to Q1-2019
+            </Text>
           </Box>
         </Flex>
       </Box>
