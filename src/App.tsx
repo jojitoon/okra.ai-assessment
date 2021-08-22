@@ -1,9 +1,17 @@
 import * as React from 'react';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import {
+  Center,
+  ChakraProvider,
+  extendTheme,
+  Heading,
+  Text,
+  VStack,
+} from '@chakra-ui/react';
 // import { ColorModeSwitcher } from './ColorModeSwitcher';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Recommendations from './Pages/Recommendations';
 import SidebarWithHeader from './Components/Sidebar';
+import ReportsPage from './Pages/Reports';
 
 /* <ColorModeSwitcher justifySelf="flex-end" /> */
 
@@ -23,6 +31,18 @@ export const App = () => (
       <SidebarWithHeader>
         <Switch>
           <Route exact path='/' component={Recommendations} />
+          <Route exact path='/reports' component={ReportsPage} />
+          <Route
+            path='*'
+            render={() => (
+              <Center h='full'>
+                <VStack>
+                  <Heading fontSize='8xl'>404</Heading>
+                  <Text>Page not found!</Text>
+                </VStack>
+              </Center>
+            )}
+          />
         </Switch>
       </SidebarWithHeader>
     </BrowserRouter>

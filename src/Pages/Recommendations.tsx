@@ -18,22 +18,8 @@ import { useEffect, useState } from 'react';
 import { readString } from 'react-papaparse';
 import { ArrowUpDownIcon, ArrowUpIcon, ArrowDownIcon } from '@chakra-ui/icons';
 import recommendationsMichealPath from '../assets/data/recommendationsMichael.csv';
+import { parseCsv } from '../utils/csv';
 export interface RecommendationsProps {}
-
-const parseCsv = async (csvFile: string, cb: (data: any) => void) => {
-  const papaConfig = {
-    complete: (data: any) => {
-      cb(data.data);
-    },
-    download: true,
-    header: true,
-    error: (error: any) => {
-      console.log(error);
-      cb(null);
-    },
-  };
-  readString(csvFile, papaConfig);
-};
 
 const parseData = async (cb: (data: any) => void) => {
   parseCsv(recommendationsMichealPath, cb);

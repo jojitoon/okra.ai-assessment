@@ -83,7 +83,7 @@ export default function SidebarWithHeader({
           {children}
         </Box>
       </Flex>
-      <Box bg='brand.300' w='full'>
+      <Box bg='brand.100' zIndex='100' w='full'>
         <Text textAlign='right' p={4} color='white'>
           @2021
         </Text>
@@ -175,6 +175,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       px={{ base: 4, md: 8 }}
       height='20'
       pos='fixed'
+      zIndex='100'
       top='0'
       left='0'
       right='0'
