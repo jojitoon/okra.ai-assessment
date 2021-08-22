@@ -1,3 +1,11 @@
+## Deployed Url
+
+[App Url](https://okra-assesment.onrender.com)
+
+## Follow up discussion
+
+[Google Docs link](https://docs.google.com/document/d/17A8BfZw09QfBMlpgB4UGERTQtkQuOtfFDV979mok8gQ/edit?usp=sharing)
+
 ## Available Scripts
 
 In the project directory, you can run:
