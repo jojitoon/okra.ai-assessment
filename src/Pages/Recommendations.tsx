@@ -4,18 +4,15 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
   TableCaption,
   Heading,
   Flex,
-  HStack,
   Text,
 } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import { readString } from 'react-papaparse';
 import { ArrowUpDownIcon, ArrowUpIcon, ArrowDownIcon } from '@chakra-ui/icons';
 import recommendationsMichealPath from '../assets/data/recommendationsMichael.csv';
 import { parseCsv } from '../utils/csv';

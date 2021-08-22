@@ -8,7 +8,6 @@ import {
   Select,
   Text,
   VStack,
-  HStack,
 } from '@chakra-ui/react';
 import * as React from 'react';
 import { FiDownload } from 'react-icons/fi';
@@ -221,12 +220,18 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
         <Flex
           mt='2'
           borderRadius='lg'
-          //   bg='gray.50'
+          // direction={{ base: 'column', md: 'row' }}
           border='1px solid #ddd'
           p='4'
           w='full'
           overflow='auto'>
-          <Box flex='1' minH='300px' mr='2' my='5' bg='white' pt='8'>
+          <Box
+            flex='1'
+            width='full'
+            minH='300px'
+            mr={{ base: 0, md: '2' }}
+            my='5'
+            pt='8'>
             <ResponsiveContainer width='100%' height='100%'>
               <LineChart data={salesData}>
                 <CartesianGrid strokeDasharray='3 3' />
@@ -257,7 +262,7 @@ const ReportsPage: React.FC<ReportsPageProps> = () => {
               </LineChart>
             </ResponsiveContainer>
           </Box>
-          <Box flex='1' minH='300px' ml='2' my='5' bg='white' pt='8'>
+          <Box flex='1' minH='300px' ml={{ base: 0, md: '2' }} my='5' pt='8'>
             <ResponsiveContainer width='100%' height='100%'>
               <BarChart data={regionalSalesData}>
                 <CartesianGrid strokeDasharray='3 3' />

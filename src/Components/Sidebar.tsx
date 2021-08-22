@@ -21,13 +21,10 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
-  Center,
 } from '@chakra-ui/react';
 import {
   FiHome,
   FiTrendingUp,
-  FiCompass,
-  FiStar,
   FiSettings,
   FiMenu,
   FiBell,
@@ -117,7 +114,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
       {LinkItems.map((link) => (
-        <NavItem key={link.name} to={link.to} icon={link.icon}>
+        <NavItem
+          onClick={onClose}
+          key={link.name}
+          to={link.to}
+          icon={link.icon}>
           {link.name}
         </NavItem>
       ))}
@@ -129,12 +130,14 @@ interface NavItemProps extends FlexProps {
   icon: IconType;
   children: ReactText;
   to: string;
+  onClick: () => void;
 }
-const NavItem = ({ icon, children, to, ...rest }: NavItemProps) => {
+const NavItem = ({ icon, children, to, onClick, ...rest }: NavItemProps) => {
   return (
     <Link
       as={NavLink}
       to={to}
+      onClick={onClick}
       style={{ textDecoration: 'none' }}
       exact
       activeStyle={{ backgroundColor: '#98c21d', color: 'white' }}>
